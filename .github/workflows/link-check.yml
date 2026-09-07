@@ -75,7 +75,7 @@ jobs:
       - name: Extract failing URLs and wait before the recheck
         if: steps.pass1.outputs.exit_code != 0
         run: |
-          jq -r '(.fail_map // .error_map // {}) | to_entries[] | .value[] | (.url // .uri // empty)' \
+          jq -r '(.fail_map // {}, .error_map // {}, .timeout_map // {}) | to_entries[] | .value[] | (.url // .uri // empty)' \
             ./lychee/pass1.json > failed-urls.txt 2>/dev/null || true
           if [ ! -s failed-urls.txt ]; then
             # extraction found nothing despite a failure: be conservative

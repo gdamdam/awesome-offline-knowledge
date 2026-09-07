@@ -2,7 +2,12 @@
 
 A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet — for disasters, shutdowns, remote regions, classrooms, and the long term.
 
-**Scope.** This list is about *offline access to knowledge*: openly licensed content you can store locally, tools to read, serve, and capture it, and the ways it travels without a network. It completes a triangle with two sibling lists, both under *Other Related Lists* below: **awesome-decentralized-web** (who controls the infrastructure) and **awesome-resilient-communication** (how people communicate when infrastructure fails).
+**Scope.** This list is about *offline access to knowledge*: openly licensed content you can store locally, tools to read, serve, and capture it, and the ways it travels without a network.
+
+It completes a triangle with two sibling lists, both under *Other Related Lists* below:
+
+- **awesome-decentralized-web** — who controls the infrastructure.
+- **awesome-resilient-communication** — how people communicate when infrastructure fails.
 
 **Out of scope:**
 - Pirated or unlicensed content. Everything listed is public domain, openly licensed, or free to download and redistribute offline for noncommercial use — and any entry whose license restricts commercial use or redistribution states the restriction in its description.

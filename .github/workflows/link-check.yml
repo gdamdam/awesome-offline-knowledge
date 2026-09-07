@@ -61,12 +61,17 @@ jobs:
         id: pass1
         uses: lycheeverse/lychee-action@v2
         with:
+          # softwareheritage.org exclusion: the site is alive with a valid
+          # Let's Encrypt cert, but serves an incomplete chain that strict
+          # TLS clients reject (checked 2026-09). Remove once upstream
+          # fixes their served chain.
           args: >-
             --no-progress
             --accept '200..=206,429'
             --timeout 60
             --max-retries 3
             --exclude 'web\.archive\.org'
+            --exclude 'softwareheritage\.org'
             README.md
           format: json
           output: ./lychee/pass1.json

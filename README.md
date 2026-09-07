@@ -138,7 +138,7 @@ Two practical consequences: on slow or metered links, prefer the systems with in
 ## Offline Servers and Learning Platforms
 *A box that serves knowledge to everyone nearby.*
 
-- [Internet-in-a-Box](https://internet-in-a-box.io/) - Turns a Raspberry Pi into a local knowledge hotspot serving Wikipedia, maps, books, and lessons to nearby devices.
+- [Internet-in-a-Box](https://iiab.io/) - Turns a Raspberry Pi into a local knowledge hotspot serving Wikipedia, maps, books, and lessons to nearby devices.
 - [Kolibri](https://learningequality.org/kolibri/) - Offline-first learning platform that syncs curricula between devices without internet, by Learning Equality.
 - [MoodleBox](https://moodlebox.net/) - Self-contained Moodle server on a Raspberry Pi that broadcasts its own Wi-Fi network, for courses and quizzes in classrooms without connectivity.
 - [RACHEL](https://worldpossible.org/) - Preloaded offline education server used in schools and community centers without connectivity, by World Possible.

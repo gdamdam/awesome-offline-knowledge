@@ -67,19 +67,24 @@ jobs:
             --timeout 60
             --max-retries 3
             --exclude 'web\.archive\.org'
-            --format json
             README.md
+          format: json
           output: ./lychee/pass1.json
           fail: false
 
       - name: Extract failing URLs and wait before the recheck
         if: steps.pass1.outputs.exit_code != 0
         run: |
-          jq -r '(.fail_map // {}) | to_entries[] | .value[] | .url' \
-            ./lychee/pass1.json > failed-urls.txt || true
+          jq -r '(.fail_map // .error_map // {}) | to_entries[] | .value[] | (.url // .uri // empty)' \
+            ./lychee/pass1.json > failed-urls.txt 2>/dev/null || true
           if [ ! -s failed-urls.txt ]; then
             # extraction found nothing despite a failure: be conservative
-            echo "Pass 1 failed but no URLs could be extracted — see the run logs." > ./lychee/confirmed.md
+            # and include the raw report head so the issue explains itself
+            { echo "Pass 1 failed but no URLs could be extracted. Report head:"
+              echo '~~~'
+              head -c 1500 ./lychee/pass1.json 2>/dev/null || echo "(no pass1.json was produced)"
+              echo; echo '~~~'
+            } > ./lychee/confirmed.md
             echo "extraction_empty=true" >> "$GITHUB_ENV"
           else
             echo "Rechecking $(wc -l < failed-urls.txt) URL(s) in 2 minutes:"
@@ -97,8 +102,8 @@ jobs:
             --accept '200..=206,429'
             --timeout 60
             --max-retries 3
-            --format markdown
             failed-urls.txt
+          format: markdown
           output: ./lychee/confirmed.md
           fail: false
 
@@ -109,6 +114,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          gh label create link-rot --repo "$GITHUB_REPOSITORY" \
+            --description 'Broken or redirected links found by the scheduled link check' \
+            --color d73a4a --force
           n=$(gh issue list --repo "$GITHUB_REPOSITORY" --label link-rot \
                 --state open --json number --jq '.[0].number // empty')
           if [ -n "$n" ]; then

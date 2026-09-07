@@ -7,7 +7,7 @@ Thanks for helping keep this list useful. Read this before opening a PR — it w
 A project or resource should meet **all** of these:
 
 1. **Offline is the point.** The entry exists to store, read, serve, capture, or transport knowledge without a network connection — not a general tool that happens to work offline.
-2. **Openly licensed.** Content must be public domain or openly licensed; software must be open source with a working implementation.
+2. **Openly licensed, or restrictions disclosed.** Software must be open source with a working implementation — do not describe non-OSI, source-available software as open source. Content must be public domain, under an open license, or free to download and redistribute offline for noncommercial use; when a license restricts commercial use or redistribution, the entry's description must state the restriction. Pirated or unlicensed content is never accepted, and a restricted license must not be described as open.
 3. **Alive or stable.** Meaningful activity (commits, releases, community) within the last 18 months, or mature software that is quiet because it is finished — still working and still used. Projects that go quiet *after* being listed are not removed; they are marked **Dormant** (see the removal policy below).
 4. **Notable.** Any credible signal beyond the project's own marketing: a real community, documented deployments, integrations, independent coverage, public funding, or ~100+ stars. New projects are welcome once they have some track record.
 

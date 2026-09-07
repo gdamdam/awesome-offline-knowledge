@@ -30,7 +30,7 @@ independent articles or talks, public funding, ~100+ repository stars.
 
 ## Exclusion checks
 
-**Is all listed content public domain or openly licensed?**
+**Is the content public domain, openly licensed, or at least freely downloadable and redistributable offline for noncommercial use? If the license restricts commercial use or redistribution, does the suggested entry state the restriction?**
 
 **Does the project depend on a cryptocurrency or token, or is it primarily an AI tool?**
 
@@ -39,6 +39,6 @@ independent articles or talks, public funding, ~100+ repository stars.
 ## Checklist
 
 - [ ] I am submitting only one project.
-- [ ] The software is open source with a working implementation (or the content is openly licensed).
+- [ ] The software is open source with a working implementation (or the content meets the licensing criterion, with any restriction disclosed in the entry).
 - [ ] The entry uses the required format and is placed alphabetically in the correct section.
 - [ ] I have read [CONTRIBUTING.md](../CONTRIBUTING.md).

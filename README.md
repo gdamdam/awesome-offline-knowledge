@@ -2,7 +2,7 @@
 
 A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet — for disasters, shutdowns, remote regions, classrooms, and the long term.
 
-**Scope.** This list is about *offline access to knowledge*: openly licensed content you can store locally, tools to read, serve, and capture it, and the ways it travels without a network.
+**Scope.** This list is about *offline access to knowledge*: content licensed for offline storage and redistribution (with any restrictions disclosed per entry), tools to read, serve, and capture it, and the ways it travels without a network.
 
 It completes a triangle with two sibling lists, both under *Other Related Lists* below:
 
@@ -19,7 +19,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
 **How to read this list.** Three different things get called "offline knowledge", and you usually need all three:
 
-- **Content** — the knowledge itself, in bulk and openly licensed. *(Wikimedia dumps, Project Gutenberg, OpenStreetMap)*
+- **Content** — the knowledge itself, in bulk, licensed for offline storage and redistribution. *(Wikimedia dumps, Project Gutenberg, OpenStreetMap)*
 - **Tools** — readers, servers, and capture software that make content usable off the network. *(Kiwix, Calibre, ArchiveBox)*
 - **Transport** — how content moves without connectivity: hotspots, removable media, sneakernets. *(Internet-in-a-Box, NNCP)*
 
@@ -55,7 +55,7 @@ Everything on this list works only if it was downloaded, installed, and tested w
 - Test the complete setup with Wi-Fi and cellular disabled: first launch, opening content, search. Confirm nothing needs an online login, license activation, DNS lookup, cloud API, or one-time network setup.
 - Keep at least two verified copies on different storage devices.
 - Verify checksums or signatures where the source publishes them.
-- Record each archive's version and date, and schedule periodic refreshes — quarterly is enough for most content.
+- Record each archive's version and date, and choose a refresh schedule that matches how quickly the material changes and how consequential outdated information would be — maps, medical references, and software documentation all age at different rates.
 - Store readers and installers alongside the content itself: an archive is useless if compatible software is not at hand for your platform.
 - Keep short startup instructions, printed or as a plain text file on the same media, so someone other than you can bring the system up.
 - Plan for power: charged devices, replaceable batteries or power banks, solar charging where outages may be long, and low-power servers such as a Raspberry Pi where a hub must stay running.
@@ -82,16 +82,18 @@ The entries most often deployed in bulk, compared on what matters when you provi
 
 |System                        |Archive format                             |Approx. storage                                                      |Update method                                   |Incremental updates                                                    |Licensing                                      |Platforms                                        |
 |------------------------------|-------------------------------------------|---------------------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------|-------------------------------------------------|
-|Kiwix (ZIM archives)          |ZIM                                        |MBs per archive, up to ~100 GB for full English Wikipedia with images|Re-download the whole ZIM from the Kiwix Library|✗ whole-file replace                                                   |Reader GPLv3; content mostly CC BY-SA          |Windows, macOS, Linux, Android, iOS, Raspberry Pi|
+|Kiwix (ZIM archives)          |ZIM                                        |MBs per archive, up to ~115 GB for full English Wikipedia with images|Re-download the whole ZIM from the Kiwix Library|✗ whole-file replace                                                   |Reader GPLv3; content mostly CC BY-SA          |Windows, macOS, Linux, Android, iOS, Raspberry Pi|
 |Wikimedia Dumps               |Compressed XML/SQL                         |~20 GB compressed for English Wikipedia article text                 |New full dumps roughly twice a month            |✗ full re-download in practice                                         |CC BY-SA / GFDL                                |Raw data — any                                   |
 |Project Gutenberg             |EPUB, HTML, plain text                     |MBs per book; on the order of 1 TB for a full mirror                 |rsync or HTTP mirrors                           |✓ rsync transfers only changes                                         |Public domain (US)                             |Standard formats — any                           |
-|OpenStreetMap data            |PBF (planet or regional extracts)          |~80 GB planet file; country extracts far smaller                     |Replication diffs, minutely to daily            |✓                                                                      |ODbL                                           |Raw data — any                                   |
+|OpenStreetMap data            |PBF (planet or regional extracts)          |~88 GB planet file; country extracts far smaller                     |Replication diffs, minutely to daily            |✓                                                                      |ODbL                                           |Raw data — any                                   |
 |Organic Maps / CoMaps / OsmAnd|Per-region map files                       |Hundreds of MB per country                                           |In-app region downloads                         |◐ OsmAnd offers diff-based live updates; the others re-download regions|Apps open source; map data ODbL                |Android, iOS                                     |
 |Kolibri                       |Kolibri content channels                   |GBs, varies by channel selection                                     |Peer-to-peer sync, USB import, or online        |✓ device-to-device sync built in                                       |Platform MIT; content licenses vary per channel|Windows, macOS, Linux, Android, Raspberry Pi     |
 |Internet-in-a-Box             |Bundles ZIM, Kolibri channels, and OSM maps|64 GB card to 1 TB+ drive, per content selection                     |Admin console re-downloads packages             |✗ whole-package replace                                                |Open-source stack; content licenses vary       |Raspberry Pi, Linux                              |
 |RACHEL                        |Preloaded module bundles                   |Sized to device, typically hundreds of GB                            |Module downloads or USB from World Possible     |✗                                                                      |Mixed open licenses per module                 |RACHEL devices, Raspberry Pi                     |
 
 ✓ supported · ◐ partial or configuration-dependent · ✗ updates mean re-downloading the whole archive
+
+Sources: Wikipedia ZIM sizes are measured from the [Kiwix download server](https://download.kiwix.org/zim/wikipedia/) (115 GB for the 2026-02 full build with images); the planet file size and its replication diffs from [Planet OSM](https://planet.openstreetmap.org/) (88 GB PBF as of 2026-09); the rsync mirroring method from Project Gutenberg's [mirroring how-to](https://www.gutenberg.org/help/mirroring.html). The compressed-dump and full-mirror figures are estimates, not published numbers.
 
 Two practical consequences: on slow or metered links, prefer the systems with incremental updates (rsync mirrors, OSM diffs, Kolibri sync) and treat whole-file systems like ZIM as things you refresh occasionally by sneakernet; and check content licenses separately from software licenses — redistributing a preloaded device is a redistribution of everything on it.
 
@@ -105,12 +107,12 @@ Two practical consequences: on slow or metered links, prefer the systems with in
 ### Health and Medicine
 *Offline medical references age: record the edition date, and treat them as support for — never a replacement of — qualified professional care.*
 
-- [Hesperian Health Guides](https://hesperian.org/) - Publisher of *Where There Is No Doctor* and other field-medicine guides written for places without professional care; digital editions are free to download under a custom open-copyright policy that restricts commercial use.
+- [Hesperian Health Guides](https://hesperian.org/) - Publisher of *Where There Is No Doctor* and other field-medicine guides written for places without professional care; digital editions are free to download under a custom open-copyright policy whose restrictions vary by edition and can require permission for commercial use, digital or large-scale redistribution, and translation.
 - [WikiMed](https://en.wikipedia.org/wiki/Wikipedia:WikiProject_Medicine/App) - Curated offline snapshot of Wikipedia's medical articles (CC BY-SA), maintained with WikiProject Medicine and distributed as a Kiwix ZIM and mobile app.
 
 ### Education and Learning
 - [OpenStax](https://openstax.org/) - Peer-reviewed college textbooks free to download as PDF; licenses vary by title between CC BY and CC BY-NC-SA — the noncommercial titles are not fully open.
-- [PhET Interactive Simulations](https://phet.colorado.edu/) - Math and science simulations from the University of Colorado Boulder (CC BY), downloadable individually or as a complete offline website installer.
+- [PhET Interactive Simulations](https://phet.colorado.edu/) - Math and science simulations from the University of Colorado Boulder, downloadable individually or as a complete offline website installer; licensing varies by component — the published simulations are CC BY-NC 4.0, a noncommercial restriction, while their source code is open source.
 
 ### Books and Languages
 - [LibriVox](https://librivox.org/) - Public-domain audiobooks read by volunteers, all downloadable for offline listening.
@@ -166,7 +168,7 @@ Two practical consequences: on slow or metered links, prefer the systems with in
 *Capture makes a copy; preservation keeps it verifiable and readable years later.*
 
 - [Archivematica](https://www.archivematica.org/) - Digital-preservation system by Artefactual that processes collections into standards-based, self-describing archival packages for long-term storage.
-- [BagIt](https://datatracker.ietf.org/doc/rfc8493/) - IETF specification (RFC 8493) for packaging files with checksum manifests so a collection can be verified after every copy or transfer; implementations exist for most languages.
+- [BagIt](https://datatracker.ietf.org/doc/rfc8493/) - Informational RFC (RFC 8493, an Independent Submission) defining a file-packaging format with checksum manifests, so a collection can be verified after every copy or transfer; implementations exist for most languages.
 
 ## Sneakernets and Offline Transfer
 *Knowledge that travels by hand.*

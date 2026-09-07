@@ -5,7 +5,7 @@
  "ArchiveBox": "ArchiveBox/ArchiveBox",
  "ArchiveTeam": {"exempt": "volunteer community wiki, not a software project"},
  "ArchiveWeb.page": "webrecorder/archiveweb.page",
- "BagIt": {"exempt": "IETF specification (RFC 8493), not a software project"},
+ "BagIt": {"exempt": "informational RFC (RFC 8493), not a software project"},
  "Calibre": "kovidgoyal/calibre",
  "CoMaps": {"exempt": "developed on Codeberg (codeberg.org/comaps)"},
  "DevDocs": "freeCodeCamp/devdocs",

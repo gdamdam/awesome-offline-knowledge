@@ -13,6 +13,7 @@
  "Geofabrik Downloads": {"exempt": "data download service operated by Geofabrik"},
  "HTTrack": "xroche/httrack",
  "Hesperian Health Guides": {"exempt": "publisher of open content, not a software project"},
+ "iFixit": {"exempt": "repair-guide publisher; the ZIM is built by Kiwix from its content"},
  "Internet-in-a-Box": "iiab/iiab",
  "Kiwix": "kiwix/kiwix-tools",
  "Kiwix Library": {"exempt": "content catalog served by the Kiwix project"},

@@ -1,8 +1,8 @@
 # Awesome Offline Knowledge [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet — for disasters, shutdowns, remote regions, classrooms, and the long term.
+A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet — for disasters, shutdowns, remote regions, and the long term.
 
-**Scope.** This list is about *offline access to knowledge*: content licensed for offline storage and redistribution (with any restrictions disclosed per entry), tools to read, serve, and capture it, and the ways it travels without a network.
+**Scope.** This list is about *offline access to knowledge*: content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network.
 
 It completes a triangle with two sibling lists, both under *Other Related Lists* below:
 

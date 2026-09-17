@@ -6,8 +6,8 @@ A curated list of content, tools, and infrastructure for keeping knowledge acces
 
 It completes a triangle with two sibling lists, both under *Other Related Lists* below:
 
-- **awesome-decentralized-web**: who controls the infrastructure.
-- **awesome-resilient-communication**: how people communicate when infrastructure fails.
+- [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web#readme): who controls the infrastructure.
+- [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication#readme): how people communicate when infrastructure fails.
 
 **Out of scope:**
 - Pirated or unlicensed content. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use. Entries with restrictions say so.
@@ -81,41 +81,57 @@ Reasonable starting combinations, drawn from the entries below. Starting points,
 |Moving updates across an air gap        |NNCP or plain removable media, apt-offline for Debian-based systems, checksums verified on both sides                            |
 
 ## Deployment at a Glance
-The entries most often deployed in bulk, compared on what matters when you buy hardware. Storage figures are approximate as of September 2026 and only grow. Treat them as planning numbers and check current sizes before buying media.
+The collections most often deployed in bulk, compared on what matters when you buy hardware. Sizes are from September 2026 and only grow. Treat them as planning numbers and check before buying media.
 
-|System                        |Archive format                             |Approx. storage                                                      |Update method                                   |Incremental updates                                                    |Licensing                                      |Platforms                                        |
-|------------------------------|-------------------------------------------|---------------------------------------------------------------------|------------------------------------------------|-----------------------------------------------------------------------|-----------------------------------------------|-------------------------------------------------|
-|Kiwix (ZIM archives)          |ZIM                                        |MBs per archive, up to ~119 GB for full English Wikipedia with images|Re-download the whole ZIM from the Kiwix Library|✗ whole-file replace                                                   |Reader GPLv3; content mostly CC BY-SA          |Windows, macOS, Linux, Android, iOS, Raspberry Pi|
-|Wikimedia Dumps               |Compressed XML/SQL                         |~20 GB compressed for English Wikipedia article text                 |New full dumps roughly twice a month            |✗ full re-download in practice                                         |CC BY-SA / GFDL                                |Raw data, any                                    |
-|Project Gutenberg             |EPUB, HTML, plain text                     |MBs per book; on the order of 1 TB for a full mirror                 |rsync or HTTP mirrors                           |✓ rsync transfers only changes                                         |Public domain (US)                             |Standard formats, any                            |
-|OpenStreetMap data            |PBF (planet or regional extracts)          |~88 GB planet file; country extracts far smaller                     |Replication diffs, minutely to daily            |✓                                                                      |ODbL                                           |Raw data, any                                    |
-|Organic Maps / CoMaps / OsmAnd|Per-region map files                       |Hundreds of MB per country                                           |In-app region downloads                         |◐ OsmAnd offers diff-based live updates; the others re-download regions|Apps open source; map data ODbL                |Android, iOS                                     |
-|Kolibri                       |Kolibri content channels                   |GBs, varies by channel selection                                     |Peer-to-peer sync, USB import, or online        |✓ device-to-device sync built in                                       |Platform MIT; content licenses vary per channel|Windows, macOS, Linux, Android, Raspberry Pi     |
-|Internet-in-a-Box             |Bundles ZIM, Kolibri channels, and OSM maps|64 GB card to 1 TB+ drive, per content selection                     |Admin console re-downloads packages             |✗ whole-package replace                                                |Open-source stack; content licenses vary       |Raspberry Pi, Linux                              |
-|RACHEL                        |Preloaded module bundles                   |Sized to device, typically hundreds of GB                            |Module downloads or USB from World Possible     |✗                                                                      |Mixed open licenses per module                 |RACHEL devices, Raspberry Pi                     |
+|System                               |Size                                                           |Updates                                                |Licenses                               |Runs on                       |
+|-------------------------------------|---------------------------------------------------------------|-------------------------------------------------------|---------------------------------------|------------------------------|
+|Kiwix (ZIM archives)                 |MBs per archive, up to 119 GB for English Wikipedia with images|✗ re-download the whole ZIM                            |Reader GPLv3, content mostly CC BY-SA  |Desktop, mobile, Raspberry Pi |
+|Wikimedia dumps (XML/SQL)            |About 20 GB compressed for English Wikipedia text              |✗ new full dumps about twice a month                   |CC BY-SA / GFDL                        |Raw data, any tool            |
+|Project Gutenberg (EPUB, HTML, text) |MBs per book, about 1 TB for a full mirror                     |✓ rsync sends only what changed                        |Public domain (US)                     |Any e-book reader             |
+|OpenStreetMap data (PBF)             |88 GB planet file, country extracts far smaller                |✓ replication diffs, minutely to daily                 |ODbL                                   |Raw data, any tool            |
+|Organic Maps / CoMaps / OsmAnd       |Hundreds of MB per country                                     |◐ OsmAnd has live diffs, the others re-download regions|Apps open source, map data ODbL        |Android, iOS                  |
+|Kolibri (content channels)           |GBs, depends on the channels                                   |✓ device-to-device sync built in                       |Platform MIT, content varies by channel|Desktop, Android, Raspberry Pi|
+|Internet-in-a-Box (ZIM, Kolibri, OSM)|64 GB card to 1 TB+ drive                                      |✗ admin console re-downloads packages                  |Open stack, content varies             |Raspberry Pi, Linux           |
+|RACHEL (module bundles)              |Hundreds of GB, sized to the device                            |✗ module downloads or USB from World Possible          |Mixed open licenses per module         |RACHEL devices, Raspberry Pi  |
 
-✓ supported · ◐ partial or configuration-dependent · ✗ updates mean re-downloading the whole archive
+✓ incremental updates · ◐ partial · ✗ updating means re-downloading the whole archive
 
-Sources: Wikipedia ZIM sizes are measured from the [Kiwix download server](https://download.kiwix.org/zim/wikipedia/) (119 GB for the 2026-08 full build with images). The planet file size and its replication diffs are from [Planet OSM](https://planet.openstreetmap.org/) (88 GB PBF as of 2026-09). The rsync mirroring method is from Project Gutenberg's [mirroring how-to](https://www.gutenberg.org/help/mirroring.html). The compressed-dump and full-mirror figures are estimates, not published numbers.
+What this means in practice: on slow or metered links, prefer the systems with incremental updates (rsync, OSM diffs, Kolibri sync) and refresh ZIM files by sneakernet now and then. And check content licenses separately from software licenses. Handing someone a preloaded device redistributes everything on it.
 
-Two practical consequences. On slow or metered links, prefer the systems with incremental updates (rsync mirrors, OSM diffs, Kolibri sync), and refresh whole-file systems like ZIM occasionally by sneakernet. And check content licenses separately from software licenses: handing someone a preloaded device redistributes everything on it.
+Sources: the [Kiwix download server](https://download.kiwix.org/zim/wikipedia/) (119 GB for the 2026-08 English Wikipedia with images), [Planet OSM](https://planet.openstreetmap.org/) (88 GB PBF, 2026-09), and Project Gutenberg's [mirroring how-to](https://www.gutenberg.org/help/mirroring.html). The dump and full-mirror totals are estimates.
 
 ## Knowledge per Gigabyte
-What fits in a given amount of storage, using the file sizes published on the Kiwix download server in September 2026. Kiwix offers most large collections in three editions: *maxi* (full text with images), *nopic* (full text, no images), and *mini* (article introductions only). The text-only and mini editions carry most of the knowledge at a fraction of the size. That is what makes small budgets workable. Figures are rounded, only grow between builds, and leave no margin for the reader software itself.
+What fits on a given card or stick, using the file sizes Kiwix published in September 2026. Kiwix offers most large collections in three editions: *maxi* (text and images), *nopic* (text only), and *mini* (article introductions only). The text-only and mini editions hold most of the knowledge at a fraction of the size. That is what makes small budgets work. Figures are rounded, grow between builds, and leave no room for the reader software itself.
 
-|Storage budget            |Suggested load                                                                                                                                           |Approx. sizes                                                                                                 |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------|
-|1 GB (spare phone storage)|WikiMed without images fills it alone; or WikiMed mini plus Appropedia and the PhET simulations                                                          |WikiMed nopic 822 MB · WikiMed mini 155 MB · Appropedia 555 MB · PhET (English) 104 MB                        |
-|4 GB (small USB stick)    |Simple English Wikipedia with images plus WikiMed mini and a country map; or iFixit repair manuals alone; or WikiMed with images plus Appropedia and PhET|Simple English Wikipedia maxi 3.2 GB · iFixit 3.3 GB · WikiMed maxi 2.1 GB · Kenya OSM extract 0.4 GB         |
-|16 GB (microSD card)      |English Wikipedia mini (the introduction of every article) plus WikiMed with images, Appropedia, and PhET                                                |Wikipedia mini 12 GB · WikiMed maxi 2.1 GB · Appropedia 555 MB · PhET 104 MB                                  |
-|64 GB                     |English Wikipedia without images plus Wiktionary and WikiMed with images; little room is left, so add iFixit or a country map only on a 128 GB card      |Wikipedia nopic 49 GB · Wiktionary nopic 8.5 GB · WikiMed maxi 2.1 GB                                         |
-|128 GB                    |Full English Wikipedia with images takes nearly the whole card; iFixit and PhET fit alongside it                                                         |Wikipedia maxi 119 GB · iFixit 3.3 GB · PhET 104 MB                                                           |
-|256 GB                    |Full English Wikipedia with images plus all of Stack Overflow, with Wiktionary, iFixit, WikiMed, and a large country map in the remaining space          |Wikipedia maxi 119 GB · Stack Overflow 107 GB · Wiktionary 8.5 GB · iFixit 3.3 GB · Germany OSM extract 4.8 GB|
-|1 TB and up               |Everything above plus the Project Gutenberg ZIM and either a continental map set or the whole OSM planet; this is Internet-in-a-Box or RACHEL territory  |Project Gutenberg 206 GB · United States OSM extract 12 GB · OSM planet 88 GB                                 |
+|Storage                   |What fits                                                                                                                           |Sizes                                                                                                 |
+|--------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+|1 GB (spare phone storage)|WikiMed without images fills it. Or WikiMed mini plus Appropedia and PhET.                                                          |WikiMed nopic 822 MB · WikiMed mini 155 MB · Appropedia 555 MB · PhET 104 MB                          |
+|4 GB (small USB stick)    |Simple English Wikipedia with images, WikiMed mini, and a country map. Or iFixit alone.                                             |Simple English Wikipedia maxi 3.2 GB · WikiMed mini 155 MB · Kenya OSM 0.4 GB · iFixit 3.3 GB         |
+|16 GB (microSD card)      |English Wikipedia mini (the introduction of every article), WikiMed with images, Appropedia, and PhET.                              |Wikipedia mini 12 GB · WikiMed maxi 2.1 GB · Appropedia 555 MB · PhET 104 MB                          |
+|64 GB                     |English Wikipedia without images, Wiktionary, and WikiMed with images. Nearly full. iFixit or a country map need a 128 GB card.     |Wikipedia nopic 49 GB · Wiktionary nopic 8.5 GB · WikiMed maxi 2.1 GB                                 |
+|128 GB                    |Full English Wikipedia with images, plus iFixit and PhET in the space left.                                                         |Wikipedia maxi 119 GB · iFixit 3.3 GB · PhET 104 MB                                                   |
+|256 GB                    |Full English Wikipedia with images and all of Stack Overflow, plus Wiktionary, iFixit, WikiMed, and a large country map.            |Wikipedia maxi 119 GB · Stack Overflow 107 GB · Wiktionary 8.5 GB · iFixit 3.3 GB · Germany OSM 4.8 GB|
+|1 TB and up               |All of the above, the Project Gutenberg ZIM, and a continent of maps or the whole OSM planet. Internet-in-a-Box or RACHEL territory.|Gutenberg 206 GB · United States OSM 12 GB · OSM planet 88 GB                                         |
 
-Three things the numbers say. Images cost more than text: English Wikipedia grows from 49 GB to 119 GB with them, so text-only editions give the most knowledge per gigabyte when storage is tight. A medical reference is the cheapest high-value item on the list, since WikiMed's full text fits in under 1 GB. And collections do not just grow, they jump: the Project Gutenberg ZIM went from 72 GB in its 2023-08 build to 206 GB in 2025-11, so re-check sizes before refreshing media bought for an older build.
+Three things the numbers say. Images are expensive: English Wikipedia goes from 49 GB to 119 GB with them, so text-only editions win when storage is tight. A medical reference is the cheapest high-value item here: WikiMed's full text is under 1 GB. And collections jump rather than grow: the Gutenberg ZIM went from 72 GB in 2023-08 to 206 GB in 2025-11, so re-check sizes before refreshing media bought for an older build.
 
-Sources: ZIM sizes are the listed file sizes on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09: `wikipedia_en_all_maxi_2026-08` (119 GB), `wikipedia_en_all_nopic_2026-06` (49 GB), `wikipedia_en_all_mini_2026-06` (12 GB), `wikipedia_en_simple_all_maxi_2026-05` (3.2 GB), `wikipedia_en_medicine_maxi_2026-04` (2.1 GB), `wikipedia_en_medicine_nopic_2026-04` (822 MB), `wikipedia_en_medicine_mini_2026-04` (155 MB), `wiktionary_en_all_nopic_2026-08` (8.5 GB), `stackoverflow.com_en_all_2026-07` (107 GB), `gutenberg_en_all_2025-11` (206 GB), `ifixit_en_all_2025-12` (3.3 GB), `appropedia_en_all_maxi_2026-02` (555 MB), `phet_en_all_2026-08` (104 MB). Map sizes are the current `-latest.osm.pbf` extracts from Geofabrik as of 2026-09 and the planet file from Planet OSM, both linked in the table above.
+Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09. Map sizes are Geofabrik's current `-latest.osm.pbf` extracts and the Planet OSM file, both linked in the table above.
+
+|Collection              |Edition|ZIM file                              |Size  |
+|------------------------|-------|--------------------------------------|------|
+|English Wikipedia       |maxi   |`wikipedia_en_all_maxi_2026-08`       |119 GB|
+|English Wikipedia       |nopic  |`wikipedia_en_all_nopic_2026-06`      |49 GB |
+|English Wikipedia       |mini   |`wikipedia_en_all_mini_2026-06`       |12 GB |
+|Simple English Wikipedia|maxi   |`wikipedia_en_simple_all_maxi_2026-05`|3.2 GB|
+|WikiMed                 |maxi   |`wikipedia_en_medicine_maxi_2026-04`  |2.1 GB|
+|WikiMed                 |nopic  |`wikipedia_en_medicine_nopic_2026-04` |822 MB|
+|WikiMed                 |mini   |`wikipedia_en_medicine_mini_2026-04`  |155 MB|
+|Wiktionary              |nopic  |`wiktionary_en_all_nopic_2026-08`     |8.5 GB|
+|Stack Overflow          |all    |`stackoverflow.com_en_all_2026-07`    |107 GB|
+|Project Gutenberg       |all    |`gutenberg_en_all_2025-11`            |206 GB|
+|iFixit                  |all    |`ifixit_en_all_2025-12`               |3.3 GB|
+|Appropedia              |maxi   |`appropedia_en_all_maxi_2026-02`      |555 MB|
+|PhET                    |all    |`phet_en_all_2026-08`                 |104 MB|
 
 ## Content Collections
 *The knowledge itself, in bulk. The license is stated wherever it is not fully open.*

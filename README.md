@@ -2,7 +2,7 @@
 
 A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet: for disasters, shutdowns, remote regions, and the long term.
 
-**Scope.** Offline access to knowledge: content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network.
+**Scope.** Content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network.
 
 It completes a triangle with two sibling lists, both under *Other Related Lists* below:
 
@@ -10,20 +10,20 @@ It completes a triangle with two sibling lists, both under *Other Related Lists*
 - **awesome-resilient-communication**: how people communicate when infrastructure fails.
 
 **Out of scope:**
-- Pirated or unlicensed content. Everything listed is public domain, openly licensed, or free to download and redistribute offline for noncommercial use. Entries with commercial or redistribution restrictions say so in their description.
+- Pirated or unlicensed content. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use. Entries with restrictions say so.
 - Cryptocurrency- and token-dependent projects.
 - AI tools and agent frameworks.
 - General self-hosting software without an offline-first purpose.
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
-**How to read this list.** Three different things get called "offline knowledge", and you usually need all three:
+**How to read this list.** "Offline knowledge" means three different things, and you usually need all three:
 
-- **Content**: the knowledge itself, in bulk, licensed for offline storage and redistribution. *(Wikimedia dumps, Project Gutenberg, OpenStreetMap)*
+- **Content**: the knowledge itself, in bulk, licensed for offline use. *(Wikimedia dumps, Project Gutenberg, OpenStreetMap)*
 - **Tools**: readers, servers, and capture software that make content usable off the network. *(Kiwix, Calibre, ArchiveBox)*
 - **Transport**: how content moves without connectivity: hotspots, removable media, sneakernets. *(Internet-in-a-Box, NNCP)*
 
-**Dormant** entries still work but their source repository has had no activity for over 2 years; the tag states the measured date. Dead projects are in the Graveyard at the bottom.
+**Dormant** entries still work but their repository has had no activity for over 2 years; the tag gives the date. Dead projects are in the Graveyard at the bottom.
 
 **How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, sizes, and project status. Every claim is verified against the project's own documentation before it lands.
 

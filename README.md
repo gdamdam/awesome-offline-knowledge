@@ -25,6 +25,8 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
 Entries marked **Dormant** still work but their source repository has had no activity for over 2 years — the tag states the measured date. Dead projects live in the Graveyard section at the bottom.
 
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are the maintainer's decisions, made by hand. AI tooling assists with drafting entry text and cross-checking licenses, sizes, and project status; every claim is verified against the project's own documentation before it lands.
+
 ## Contents
 
 - [Prepare Before You Need It](#prepare-before-you-need-it)

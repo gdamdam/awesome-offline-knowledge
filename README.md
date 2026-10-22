@@ -2,30 +2,15 @@
 
 A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet: for disasters, shutdowns, remote regions, and the long term.
 
-**Scope.** Content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network.
+**Scope.** Content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use; entries with restrictions say so. Pirated content, cryptocurrency-dependent projects, AI tools, and general self-hosting software without an offline-first purpose are out of scope. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the details and before submitting a project. **Dormant** entries still work but their repository has had no activity for over 2 years; dead projects are in the [Graveyard](#graveyard).
 
-It completes a triangle with two sibling lists, both under *Other Related Lists* below:
-
-- [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web#readme): who controls the infrastructure.
-- [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication#readme): how people communicate when infrastructure fails.
-
-**Out of scope:**
-- Pirated or unlicensed content. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use. Entries with restrictions say so.
-- Cryptocurrency- and token-dependent projects.
-- AI tools and agent frameworks.
-- General self-hosting software without an offline-first purpose.
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
+It completes a triangle with two sibling lists: [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web#readme) covers who controls the infrastructure, and [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication#readme) how people communicate when infrastructure fails.
 
 **How to read this list.** "Offline knowledge" means three different things, and you usually need all three:
 
 - **Content**: the knowledge itself, in bulk, licensed for offline use. *(Wikimedia dumps, Project Gutenberg, OpenStreetMap)*
 - **Tools**: readers, servers, and capture software that make content usable off the network. *(Kiwix, Calibre, ArchiveBox)*
 - **Transport**: how content moves without connectivity: hotspots, removable media, sneakernets. *(Internet-in-a-Box, NNCP)*
-
-**Dormant** entries still work but their repository has had no activity for over 2 years; the tag gives the date. Dead projects are in the Graveyard at the bottom.
-
-**How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, sizes, and project status. Every claim is verified against the project's own documentation before it lands.
 
 ## Contents
 
@@ -233,6 +218,8 @@ Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](
 - [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web) - Peer-to-peer, federated, and local-first software: who controls the infrastructure.
 - [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication) - Communication during shutdowns, disasters, and off-grid operation.
 - [awesome-web-archiving](https://github.com/iipc/awesome-web-archiving) - Web archiving in depth, maintained by the IIPC.
+
+**How this list is maintained.** Inclusion, exclusion, and the criteria above are decided by a human maintainer, me, by hand. AI tooling helps draft entry text and cross-check licenses, sizes, and project status. Every claim is verified against the project's own documentation before it lands.
 
 ## Contributors
 

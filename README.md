@@ -18,9 +18,7 @@ It completes a triangle with two sibling lists: [awesome-decentralized-web](http
 
 ## Contents
 
-- [Prepare Before You Need It](#prepare-before-you-need-it)
 - [Choose by Scenario](#choose-by-scenario)
-- [Deployment at a Glance](#deployment-at-a-glance)
 - [Knowledge per Gigabyte](#knowledge-per-gigabyte)
 - [Content Collections](#content-collections)
   - [General Reference](#general-reference)
@@ -30,33 +28,20 @@ It completes a triangle with two sibling lists: [awesome-decentralized-web](http
   - [Technical and Practical Knowledge](#technical-and-practical-knowledge)
 - [Readers and Reference Tools](#readers-and-reference-tools)
 - [Offline Servers and Learning Platforms](#offline-servers-and-learning-platforms)
+- [Deployment at a Glance](#deployment-at-a-glance)
 - [Maps and Navigation](#maps-and-navigation)
 - [Capture and Web Archiving](#capture-and-web-archiving)
 - [Preservation, Packaging, and Verification](#preservation-packaging-and-verification)
 - [Sneakernets and Offline Transfer](#sneakernets-and-offline-transfer)
 - [Case Studies](#case-studies)
+- [Prepare Before You Need It](#prepare-before-you-need-it)
 - [Guides and Communities](#guides-and-communities)
 - [Graveyard](#graveyard)
 - [Other Related Lists](#other-related-lists)
 - [Contributors](#contributors)
 
-## Prepare Before You Need It
-Everything on this list works only if it was downloaded, installed, and tested while the network still worked. Preparation takes an afternoon and the checklist is short:
-
-- Download content and the apps that read it in advance. Check free storage before starting a multi-gigabyte archive.
-- Test the full setup with Wi-Fi and cellular off: first launch, opening content, search. Nothing should need an online login, license activation, DNS lookup, or cloud API.
-- Keep at least two verified copies on different storage devices.
-- Verify checksums or signatures where the source publishes them.
-- Record each archive's version and date, and set a refresh schedule. Maps, medical references, and software documentation all age at different rates.
-- Store readers and installers alongside the content. An archive is useless without compatible software for your platform.
-- Keep short startup instructions on the same media, printed or as plain text, so someone else can bring the system up.
-- Plan for power: charged devices, power banks, solar charging for long outages, and a low-power server such as a Raspberry Pi where a hub must stay running.
-- If you run a community server, test it from several client devices over its own Wi-Fi, not only from the machine it runs on.
-- Prefer formats that stay usable without a specific vendor or account. Plain files outlive app-locked libraries.
-- For medical and emergency material, note the edition date. Offline references age, and none replace qualified professional help.
-
 ## Choose by Scenario
-Reasonable starting combinations, drawn from the entries below. Starting points, not guarantees. The medical caveat above applies throughout.
+Reasonable starting combinations, drawn from the entries below. Starting points, not guarantees. For medical material, see the caveat in [Prepare Before You Need It](#prepare-before-you-need-it).
 
 |Scenario                                |Reasonable starting point                                                                                                        |
 |----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -69,28 +54,8 @@ Reasonable starting combinations, drawn from the entries below. Starting points,
 |Long-term preservation                  |BagIt packaging with checksum manifests, Archivematica for a full workflow, guidance from digipres.org                           |
 |Moving updates across an air gap        |NNCP or plain removable media, apt-offline for Debian-based systems, checksums verified on both sides                            |
 
-## Deployment at a Glance
-The collections most often deployed in bulk, compared on what matters when you buy hardware. Sizes are from September 2026 and only grow. Treat them as planning numbers and check before buying media.
-
-|System                               |Size                                                           |Updates                                                |Licenses                               |Runs on                       |
-|-------------------------------------|---------------------------------------------------------------|-------------------------------------------------------|---------------------------------------|------------------------------|
-|Kiwix (ZIM archives)                 |MBs per archive, up to 119 GB for English Wikipedia with images|✗ re-download the whole ZIM                            |Reader GPLv3, content mostly CC BY-SA  |Desktop, mobile, Raspberry Pi |
-|Wikimedia dumps (XML/SQL)            |About 20 GB compressed for English Wikipedia text              |✗ new full dumps about twice a month                   |CC BY-SA / GFDL                        |Raw data, any tool            |
-|Project Gutenberg (EPUB, HTML, text) |MBs per book, about 1 TB for a full mirror                     |✓ rsync sends only what changed                        |Public domain (US)                     |Any e-book reader             |
-|OpenStreetMap data (PBF)             |88 GB planet file, country extracts far smaller                |✓ replication diffs, minutely to daily                 |ODbL                                   |Raw data, any tool            |
-|Organic Maps / CoMaps / OsmAnd       |Hundreds of MB per country                                     |◐ OsmAnd has live diffs, the others re-download regions|Apps open source, map data ODbL        |Android, iOS                  |
-|Kolibri (content channels)           |GBs, depends on the channels                                   |✓ device-to-device sync built in                       |Platform MIT, content varies by channel|Desktop, Android, Raspberry Pi|
-|Internet-in-a-Box (ZIM, Kolibri, OSM)|64 GB card to 1 TB+ drive                                      |✗ admin console re-downloads packages                  |Open stack, content varies             |Raspberry Pi, Linux           |
-|RACHEL (module bundles)              |Hundreds of GB, sized to the device                            |✗ module downloads or USB from World Possible          |Mixed open licenses per module         |RACHEL devices, Raspberry Pi  |
-
-✓ incremental updates · ◐ partial · ✗ updating means re-downloading the whole archive
-
-What this means in practice: on slow or metered links, prefer the systems with incremental updates (rsync, OSM diffs, Kolibri sync) and refresh ZIM files by sneakernet now and then. And check content licenses separately from software licenses. Handing someone a preloaded device redistributes everything on it.
-
-Sources: the [Kiwix download server](https://download.kiwix.org/zim/wikipedia/) (119 GB for the 2026-08 English Wikipedia with images), [Planet OSM](https://planet.openstreetmap.org/) (88 GB PBF, 2026-09), and Project Gutenberg's [mirroring how-to](https://www.gutenberg.org/help/mirroring.html). The dump and full-mirror totals are estimates.
-
 ## Knowledge per Gigabyte
-What fits on a given card or stick, using the file sizes Kiwix published in September 2026. Kiwix offers most large collections in three editions: *maxi* (text and images), *nopic* (text only), and *mini* (article introductions only). The text-only and mini editions hold most of the knowledge at a fraction of the size. That is what makes small budgets work. Figures are rounded, grow between builds, and leave no room for the reader software itself.
+What fits on a given card or stick, using the file sizes Kiwix published in September 2026. Figures are rounded, grow between builds, and leave no room for the reader software itself.
 
 |Storage                   |What fits                                                                                                                           |Sizes                                                                                                 |
 |--------------------------|------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
@@ -102,9 +67,18 @@ What fits on a given card or stick, using the file sizes Kiwix published in Sept
 |256 GB                    |Full English Wikipedia with images and all of Stack Overflow, plus Wiktionary, iFixit, WikiMed, and a large country map.            |Wikipedia maxi 119 GB · Stack Overflow 107 GB · Wiktionary 8.5 GB · iFixit 3.3 GB · Germany OSM 4.8 GB|
 |1 TB and up               |All of the above, the Project Gutenberg ZIM, and a continent of maps or the whole OSM planet. Internet-in-a-Box or RACHEL territory.|Gutenberg 206 GB · United States OSM 12 GB · OSM planet 88 GB                                         |
 
-Three things the numbers say. Images are expensive: English Wikipedia goes from 49 GB to 119 GB with them, so text-only editions win when storage is tight. A medical reference is the cheapest high-value item here: WikiMed's full text is under 1 GB. And collections jump rather than grow: the Gutenberg ZIM went from 72 GB in 2023-08 to 206 GB in 2025-11, so re-check sizes before refreshing media bought for an older build.
+Editions: Kiwix offers most large collections as *maxi* (text and images), *nopic* (text only), and *mini* (article introductions only). The text-only and mini editions hold most of the knowledge at a fraction of the size, which is what makes small budgets work.
 
-Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09. Map sizes are Geofabrik's current `-latest.osm.pbf` extracts and the Planet OSM file, both linked in the table above.
+Three things the numbers say:
+
+- Images are expensive. English Wikipedia goes from 49 GB to 119 GB with them, so text-only editions win when storage is tight.
+- A medical reference is the cheapest high-value item here. WikiMed's full text is under 1 GB.
+- Collections jump rather than grow. The Gutenberg ZIM went from 72 GB in 2023-08 to 206 GB in 2025-11, so re-check sizes before refreshing media bought for an older build.
+
+<details>
+<summary>Sources and exact files</summary>
+
+ZIM sizes are the file sizes listed on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09. Map sizes are [Geofabrik](https://download.geofabrik.de/)'s current `-latest.osm.pbf` extracts and the [Planet OSM](https://planet.openstreetmap.org/) file.
 
 |Collection              |Edition|ZIM file                              |Size  |
 |------------------------|-------|--------------------------------------|------|
@@ -121,6 +95,8 @@ Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](
 |iFixit                  |all    |`ifixit_en_all_2025-12`               |3.3 GB|
 |Appropedia              |maxi   |`appropedia_en_all_maxi_2026-02`      |555 MB|
 |PhET                    |all    |`phet_en_all_2026-08`                 |104 MB|
+
+</details>
 
 ## Content Collections
 *The knowledge itself, in bulk. The license is stated wherever it is not fully open.*
@@ -169,6 +145,34 @@ Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](
 - [MoodleBox](https://moodlebox.net/) - Self-contained Moodle server on a Raspberry Pi that broadcasts its own Wi-Fi network. For courses and quizzes in classrooms without connectivity.
 - [RACHEL](https://worldpossible.org/) - Preloaded offline education server used in schools and community centers without connectivity. By World Possible.
 
+## Deployment at a Glance
+The collections most often deployed in bulk, compared on what matters when you buy hardware. Sizes are from September 2026 and only grow. Treat them as planning numbers and check before buying media.
+
+|System                               |Size                                                           |Updates                                                |Licenses                               |Runs on                       |
+|-------------------------------------|---------------------------------------------------------------|-------------------------------------------------------|---------------------------------------|------------------------------|
+|Kiwix (ZIM archives)                 |MBs per archive, up to 119 GB for English Wikipedia with images|✗ re-download the whole ZIM                            |Reader GPLv3, content mostly CC BY-SA  |Desktop, mobile, Raspberry Pi |
+|Wikimedia dumps (XML/SQL)            |About 20 GB compressed for English Wikipedia text              |✗ new full dumps about twice a month                   |CC BY-SA / GFDL                        |Raw data, any tool            |
+|Project Gutenberg (EPUB, HTML, text) |MBs per book, about 1 TB for a full mirror                     |✓ rsync sends only what changed                        |Public domain (US)                     |Any e-book reader             |
+|OpenStreetMap data (PBF)             |88 GB planet file, country extracts far smaller                |✓ replication diffs, minutely to daily                 |ODbL                                   |Raw data, any tool            |
+|Organic Maps / CoMaps / OsmAnd       |Hundreds of MB per country                                     |◐ OsmAnd has live diffs, the others re-download regions|Apps open source, map data ODbL        |Android, iOS                  |
+|Kolibri (content channels)           |GBs, depends on the channels                                   |✓ device-to-device sync built in                       |Platform MIT, content varies by channel|Desktop, Android, Raspberry Pi|
+|Internet-in-a-Box (ZIM, Kolibri, OSM)|64 GB card to 1 TB+ drive                                      |✗ admin console re-downloads packages                  |Open stack, content varies             |Raspberry Pi, Linux           |
+|RACHEL (module bundles)              |Hundreds of GB, sized to the device                            |✗ module downloads or USB from World Possible          |Mixed open licenses per module         |RACHEL devices, Raspberry Pi  |
+
+✓ incremental updates · ◐ partial · ✗ updating means re-downloading the whole archive
+
+What this means in practice:
+
+- On slow or metered links, prefer the systems with incremental updates (rsync, OSM diffs, Kolibri sync) and refresh ZIM files by sneakernet now and then.
+- Check content licenses separately from software licenses. Handing someone a preloaded device redistributes everything on it.
+
+<details>
+<summary>Sources</summary>
+
+The [Kiwix download server](https://download.kiwix.org/zim/wikipedia/) (119 GB for the 2026-08 English Wikipedia with images), [Planet OSM](https://planet.openstreetmap.org/) (88 GB PBF, 2026-09), and Project Gutenberg's [mirroring how-to](https://www.gutenberg.org/help/mirroring.html). The dump and full-mirror totals are estimates.
+
+</details>
+
 ## Maps and Navigation
 
 - [CoMaps](https://www.comaps.app/) - Community-governed offline maps and navigation app built on OpenStreetMap data. Forked from Organic Maps.
@@ -205,6 +209,21 @@ Sources: the ZIM sizes are the file sizes listed on the [Kiwix download server](
 ## Case Studies
 
 - [El Paquete Semanal](https://en.wikipedia.org/wiki/El_Paquete_Semanal) - Cuba's weekly terabyte of media and software, distributed nationwide by hand on hard drives. Arguably the largest sneakernet in the world.
+
+## Prepare Before You Need It
+Everything on this list works only if it was downloaded, installed, and tested while the network still worked. Preparation takes an afternoon and the checklist is short:
+
+- Download content and the apps that read it in advance. Check free storage before starting a multi-gigabyte archive.
+- Test the full setup with Wi-Fi and cellular off: first launch, opening content, search. Nothing should need an online login, license activation, DNS lookup, or cloud API.
+- Keep at least two verified copies on different storage devices.
+- Verify checksums or signatures where the source publishes them.
+- Record each archive's version and date, and set a refresh schedule. Maps, medical references, and software documentation all age at different rates.
+- Store readers and installers alongside the content. An archive is useless without compatible software for your platform.
+- Keep short startup instructions on the same media, printed or as plain text, so someone else can bring the system up.
+- Plan for power: charged devices, power banks, solar charging for long outages, and a low-power server such as a Raspberry Pi where a hub must stay running.
+- If you run a community server, test it from several client devices over its own Wi-Fi, not only from the machine it runs on.
+- Prefer formats that stay usable without a specific vendor or account. Plain files outlive app-locked libraries.
+- For medical and emergency material, note the edition date. Offline references age, and none replace qualified professional help.
 
 ## Guides and Communities
 

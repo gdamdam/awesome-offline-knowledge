@@ -6,7 +6,7 @@ A curated list of content, tools, and infrastructure for keeping knowledge acces
 
 **Out of scope:** pirated or unlicensed content, cryptocurrency-dependent projects, AI tools, and general self-hosting software without an offline-first purpose.
 
-**Tags.** **Dormant** entries still work but their repository has had no activity for over 2 years. Dead projects are in the [Graveyard](#graveyard). Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
+**Tags.** **Dormant** entries still work but their repository has had no activity for over 2 years. Dead projects are in the Graveyard. Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
 It completes a triangle with two sibling lists: [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web#readme) covers who controls the infrastructure, and [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication#readme) how people communicate when infrastructure fails.
 
@@ -41,7 +41,7 @@ It completes a triangle with two sibling lists: [awesome-decentralized-web](http
 - [Contributors](#contributors)
 
 ## Choose by Scenario
-Reasonable starting combinations, drawn from the entries below. Starting points, not guarantees. For medical material, see the caveat in [Prepare Before You Need It](#prepare-before-you-need-it).
+Reasonable starting combinations, drawn from the entries below. Starting points, not guarantees. For medical material, see the caveat in Prepare Before You Need It.
 
 |Scenario                                |Reasonable starting point                                                                                                        |
 |----------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
@@ -78,7 +78,7 @@ Three things the numbers say:
 <details>
 <summary>Sources and exact files</summary>
 
-ZIM sizes are the file sizes listed on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09. Map sizes are [Geofabrik](https://download.geofabrik.de/)'s current `-latest.osm.pbf` extracts and the [Planet OSM](https://planet.openstreetmap.org/) file.
+ZIM sizes are the file sizes listed on the [Kiwix download server](https://download.kiwix.org/zim/) for the newest build of each title as of 2026-09. Map sizes are Geofabrik's current `-latest.osm.pbf` extracts and the Planet OSM file.
 
 |Collection              |Edition|ZIM file                              |Size  |
 |------------------------|-------|--------------------------------------|------|

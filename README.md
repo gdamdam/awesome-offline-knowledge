@@ -2,7 +2,11 @@
 
 A curated list of content, tools, and infrastructure for keeping knowledge accessible without the internet: for disasters, shutdowns, remote regions, and the long term.
 
-**Scope.** Content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use; entries with restrictions say so. Pirated content, cryptocurrency-dependent projects, AI tools, and general self-hosting software without an offline-first purpose are out of scope. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the details and before submitting a project. **Dormant** entries still work but their repository has had no activity for over 2 years; dead projects are in the [Graveyard](#graveyard).
+**Scope.** Content licensed for offline storage and redistribution, tools to read, serve, and capture it, and the ways it travels without a network. Everything here is public domain, openly licensed, or free to download and redistribute offline for noncommercial use. Entries with restrictions say so.
+
+**Out of scope:** pirated or unlicensed content, cryptocurrency-dependent projects, AI tools, and general self-hosting software without an offline-first purpose.
+
+**Tags.** **Dormant** entries still work but their repository has had no activity for over 2 years. Dead projects are in the [Graveyard](#graveyard). Read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a project.
 
 It completes a triangle with two sibling lists: [awesome-decentralized-web](https://github.com/gdamdam/awesome-decentralized-web#readme) covers who controls the infrastructure, and [awesome-resilient-communication](https://github.com/gdamdam/awesome-resilient-communication#readme) how people communicate when infrastructure fails.
 
